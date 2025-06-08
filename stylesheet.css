@@ -33,13 +33,18 @@ header {
 }
 
 /* navbar */
+ header img {
+     max-width: 275px;
+     height: 150px;
+ }
+
 .navbar {
     list-style: none;
     display: grid;
     border-radius: 10px;
     align-items: center;
     text-align: center;
-    grid-gap: 1.25rem;
+    grid-gap: 1rem;
 }
 
 .navbar a {
@@ -61,6 +66,7 @@ header {
     text-decoration: none;
     align-items: center;
     text-align: center;
+
 }
 
 .navbar > li:not(.logo):hover {
@@ -232,6 +238,11 @@ footer a, footer p {
         margin-inline: 10%;
     }
 
+    .logo img {
+        width: 230px;
+        height: auto;
+    }
+
     .navbar {
         display: grid;
         flex-wrap: nowrap;
@@ -262,6 +273,10 @@ footer a, footer p {
 
 @media (max-width: 699px) {
 
+    header {
+        margin-inline: 5%;
+    }
+
     main {
         margin-inline: 5%;
     }
@@ -269,6 +284,12 @@ footer a, footer p {
     .navbar {
         display: grid;
         grid-auto-flow: row;
+
+    }
+
+    .navbar li {
+        width: 50%;
+        justify-content: center;
     }
 
     .box {
