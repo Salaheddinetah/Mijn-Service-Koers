@@ -8,20 +8,22 @@ fix over-ons
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Halant:wght@300;400;500;600;700&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Special+Gothic+Expanded+One&display=swap');
 
 
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Special Gothic Expanded One", sans-serif;
+    font-family: 'Special Gothic Expanded One', sans-serif;
     font-weight: 800;
 }
 
 body {
     color: #161925;
     background-color: #f9f4ef;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* header */
@@ -78,8 +80,6 @@ article {
 
 p a {
     color: #020826;
-    font-family: "Halant", sans-serif;
-
 }
 
 h1 {
@@ -87,9 +87,6 @@ h1 {
 }
 
 /* Aanbod en kosten */
-
-
-
 
 h2 {
 
@@ -140,7 +137,6 @@ h2 {
     max-width: 100%;
     object-fit: cover;
     float: right;
-    clear: right;
     padding-left: 2rem;
     padding-block: 1em;
 }
@@ -160,7 +156,7 @@ h2 {
     column-gap: 20px;
     clear: right;
     border-width: 3px;
-    margin: 5%;
+    padding: 1em;
 }
 
 .box article {
@@ -196,13 +192,22 @@ h4 {
 
 /* footer */
 
-footer {
+.footer {
+    display: flex;
     text-align: right;
-    background-color: #8c7851;
+    justify-content: space-between;
+    background-color: #8c7546;
     color: white;
-    margin-bottom: 0;
-    padding: 10px;
-    font-size: 1.5em;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+footer a, footer p {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    text-decoration: none;
+    font-weight: 100;
 }
 
 @media (min-width: 800px) {
@@ -221,7 +226,7 @@ footer {
     }
 }
 
-@media (min-width: 700px) and (max-width: 799px) {
+@media (min-width: 700px) and (max-width: 899px) {
 
     main {
         margin-inline: 10%;
@@ -239,6 +244,20 @@ footer {
         font-size: 10px;
         text-wrap: nowrap;
     }
+
+    .box {
+        display: flex;
+        flex-flow: column;
+        width: 100%
+    }
+    .box article {
+        width: 60%;
+        flex: 1;
+        align-self: center;
+    }
+    #koers-service {
+        width: 100%;
+    }
 }
 
 @media (max-width: 699px) {
@@ -255,25 +274,14 @@ footer {
     .box {
         display: flex;
         flex-flow: column;
+        width: 95%;
+    }
+
+    #koers-service {
         width: 100%;
     }
+
+
 }
 
 
-@media (max-width: 699px) {
-
-    main {
-        margin-inline: 5%;
-    }
-
-    .navbar {
-        display: grid;
-        grid-auto-flow: row;
-    }
-
-    .box {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
-    }
-}
