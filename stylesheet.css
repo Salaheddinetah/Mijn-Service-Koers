@@ -104,18 +104,25 @@ h1 {
 #over-ons-foto {
     width: min(100%, 500px);
     float: right;
-    padding-block: 1em;
+    padding-block: 1rem;
 }
 
 /* Index */
 
 #remco {
     float: right;
-    margin: 30px;
     max-width: 100%;
     aspect-ratio: 1/1;
     height: auto;
     object-fit: cover;
+}
+
+#index-foto {
+    max-width: min(100%, 600px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    float: left;
+    padding-right: 2rem;
 }
 
 /* Contact */
