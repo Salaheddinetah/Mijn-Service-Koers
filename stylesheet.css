@@ -23,13 +23,16 @@ body {
     color: #161925;
     background-color: #f9f4ef;
     overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
     max-width: 100%;
 }
 
 /* header */
 
 header {
-    margin-inline: 15%;
+    margin-inline: 20%;
 }
 
 /* navbar */
@@ -98,13 +101,22 @@ h1 {
 #Aanbod {
     padding: 1em;
 }
+#koers-service {
+    width: min(100%, 400px);
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    float: right;
+    padding-left: 2rem;
+    padding-block: 1em;
+    height: auto;
+}
 
 /* Over ons*/
 
 #over-ons-foto {
-    width: min(100%, 500px);
+    width: min(100%, 400px);
     float: right;
-    padding-block: 1rem;
+    padding-left: 2rem;
 }
 
 /* Index */
@@ -128,35 +140,33 @@ h1 {
 /* Contact */
 
 #foto-contact {
-    max-width: min(100%, 600px);
+    max-width: min(100%, 500px);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     min-height: 200px;
-    padding-right: 2rem;
+    padding-left: 2rem;
     padding-bottom: 2rem;
-    float: left;
+    float: right;
 }
 
 #map-partners {
-    display: flex;
-    max-width: min(100%, 800px);
-    max-height: min(400px, 100%);
+    float: left;
+    width: min(100%, 500px);
     aspect-ratio: 1 / 1;
-    gap: 1rem;
-    justify-content: center;
-    padding-top: 2rem;
+}
+
+.map-partner-text {
+    padding-left: 2rem;
 }
 
 /* site spec */
 
-#koers-service {
-    width: 40%;
-    min-width: min(100%, 400px);
-    max-width: 100%;
+.site-spec {
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     float: right;
+    width: min(500px, 100%);
     padding-left: 2rem;
-    padding-block: 1em;
 }
 
 .inhoud {
@@ -170,9 +180,8 @@ h1 {
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-flow: row;
-    flex: 1;
     gap: 10px;
-    column-gap: 20px;
+    column-gap: 2rem;
     row-gap: 2rem;
     clear: right;
     border-width: 3px;
@@ -256,7 +265,8 @@ footer a, footer p {
 
 @media (min-width: 800px) {
     main {
-        margin-inline: 15%;
+        margin-inline: 20%;
+        padding-bottom: 2rem;
     }
 
     .navbar {
@@ -274,6 +284,7 @@ footer a, footer p {
 
     main {
         margin-inline: 10%;
+        padding-bottom: 2rem;
     }
 
     .logo img {
@@ -317,6 +328,7 @@ footer a, footer p {
 
     main {
         margin-inline: 5%;
+        padding-bottom: 2rem;
     }
 
     .navbar {
@@ -339,5 +351,6 @@ footer a, footer p {
         width: 100%;
     }
 }
+
 
 
