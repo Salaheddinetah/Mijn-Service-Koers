@@ -1,16 +1,11 @@
-
 /*
 fix over-ons - done
 fix aanbod - done
-fix rwd for bigger screen my computer
-fix index
+fix rwd for bigger screen like my computer
+fix index - done
 */
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Special+Gothic+Expanded+One&display=swap');
-
-
 
 * {
     margin: 0;
@@ -36,10 +31,10 @@ header {
 }
 
 /* navbar */
- header img {
-     max-width: 275px;
-     height: 150px;
- }
+header img {
+    max-width: 275px;
+    height: 150px;
+}
 
 .navbar {
     list-style: none;
@@ -77,6 +72,8 @@ header {
     border: 1px #B83A14;
 }
 
+/* Teksten */
+
 p {
     font-family: "Halant", sans-serif;
     font-weight: 500;
@@ -96,12 +93,17 @@ h1 {
     padding-block: 1em;
 }
 
+h3 {
+    font-weight: 200;
+}
+
 /* Aanbod en kosten */
 
 #Aanbod {
     padding: 1em;
 }
-#koers-service {
+
+.koers-service {
     width: min(100%, 400px);
     object-fit: cover;
     aspect-ratio: 1 / 1;
@@ -113,7 +115,7 @@ h1 {
 
 /* Over ons*/
 
-#over-ons-foto {
+.over-ons-foto {
     width: min(100%, 400px);
     float: right;
     padding-left: 2rem;
@@ -121,20 +123,12 @@ h1 {
 
 /* Index */
 
-#remco {
-    float: right;
-    max-width: 100%;
-    aspect-ratio: 1/1;
-    height: auto;
-    object-fit: cover;
-}
-
-#index-foto {
+.index-foto {
     max-width: min(100%, 600px);
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    float: left;
-    padding-right: 2rem;
+    float: right;
+    padding-left: 2rem;
 }
 
 /* Contact */
@@ -155,9 +149,6 @@ h1 {
     aspect-ratio: 1 / 1;
 }
 
-.map-partner-text {
-    padding-left: 2rem;
-}
 
 /* site spec */
 
@@ -174,6 +165,8 @@ h1 {
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+/* BOX */
 
 .box {
     display: flex;
@@ -215,6 +208,10 @@ h1 {
     padding-inline: 1rem;
 }
 
+.box article li {
+    font-weight: 100;
+}
+
 
 /* footer */
 
@@ -237,31 +234,7 @@ footer a, footer p {
     font-weight: 100;
 }
 
-/* Nog niet klaar */
-
-.klaar {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding-block: 2em;
-}
-
-.klaar li {
-    background-color: #b83330;
-    flex: 1;
-    padding: 1rem;
-    border-radius: 35px;
-    text-decoration: none;
-    align-items: center;
-    text-align: center;
-}
-
-.klaar li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 100;
-}
+/*  RWD */
 
 @media (min-width: 800px) {
     main {
@@ -310,11 +283,13 @@ footer a, footer p {
         flex-flow: column;
         width: 100%
     }
+
     .box article {
         width: 60%;
         flex: 1;
         align-self: center;
     }
+
     #koers-service {
         width: 100%;
     }
