@@ -1,17 +1,10 @@
-/*
-fix over-ons - done
-fix aanbod - done
-fix rwd for bigger screen like my computer
-fix index - done
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Special+Gothic+Expanded+One&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Special Gothic Expanded One', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 body {
@@ -27,7 +20,7 @@ body {
 /* header */
 
 header {
-    margin-inline: 20%;
+  margin-inline: 5%;
 }
 
 /* navbar */
@@ -40,31 +33,28 @@ header img {
     list-style: none;
     display: grid;
     border-radius: 10px;
-    align-items: center;
-    text-align: center;
-    grid-gap: 1rem;
-}
-
-.navbar a {
-    display: grid;
-    text-decoration: none;
-    color: white;
-    text-align: center;
     width: 100%;
-    height: auto;
-    font-weight: 100;
-    justify-content: center;
+    align-items: center;
     justify-items: center;
+    grid-gap: 1.5rem;
+    justify-content: center;
 }
 
 .navbar > li:not(.logo) {
     background-color: #b83330;
-    padding: 1rem;
-    border-radius: 35px;
-    text-decoration: none;
-    align-items: center;
+    border-radius: 30px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
 
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
 }
 
 .navbar > li:not(.logo):hover {
@@ -74,28 +64,25 @@ header img {
 
 /* Teksten */
 
-p {
+p, p a {
     font-family: "Halant", sans-serif;
     font-weight: 500;
-    padding-bottom: 1em;
+    margin-bottom: 1em;
+    color: #020826;
+}
+
+h1 {
+    margin-block: 1em;
+}
+
+h3 {
+    font-weight: 200;
 }
 
 article {
     padding-block: 1em;
 }
 
-p a {
-    color: #020826;
-    font-family: "Halant", sans-serif;
-}
-
-h1 {
-    padding-block: 1em;
-}
-
-h3 {
-    font-weight: 200;
-}
 
 /* Aanbod en kosten */
 
@@ -108,8 +95,8 @@ h3 {
     object-fit: cover;
     aspect-ratio: 1 / 1;
     float: right;
-    padding-left: 2rem;
-    padding-block: 1em;
+    margin-left: 2rem;
+    margin-block: 1rem;
     height: auto;
 }
 
@@ -118,7 +105,7 @@ h3 {
 .over-ons-foto {
     width: min(100%, 400px);
     float: right;
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 /* Index */
@@ -128,7 +115,7 @@ h3 {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     float: right;
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 /* Contact */
@@ -138,8 +125,8 @@ h3 {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     min-height: 200px;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
     float: right;
 }
 
@@ -157,7 +144,7 @@ h3 {
     object-fit: cover;
     float: right;
     width: min(500px, 100%);
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 .inhoud {
@@ -178,7 +165,7 @@ h3 {
     row-gap: 2rem;
     clear: right;
     border-width: 3px;
-    padding: 1em;
+    margin: 1em;
 }
 
 .box article {
@@ -186,8 +173,8 @@ h3 {
     background-color: #ede3df;
     text-align: center;
     padding: 20px;
-    border-radius: 45px;
-    box-shadow: 5px 2px 0 #938d88;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 #938d88;
 }
 
 .box article h4 {
@@ -236,10 +223,10 @@ footer a, footer p {
 
 /*  RWD */
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     main {
-        margin-inline: 20%;
-        padding-bottom: 2rem;
+        margin-inline: 10%;
+        margin-bottom: 2rem;
     }
 
     .navbar {
@@ -253,11 +240,17 @@ footer a, footer p {
     }
 }
 
-@media (min-width: 700px) and (max-width: 899px) {
+@media (min-width: 700px) and (max-width: 999px) {
+
+
 
     main {
-        margin-inline: 10%;
-        padding-bottom: 2rem;
+        margin-inline: 5%;
+        margin-bottom: 2rem;
+    }
+
+    header {
+        width: 90%;
     }
 
     .logo img {
@@ -267,10 +260,10 @@ footer a, footer p {
 
     .navbar {
         display: grid;
-        flex-wrap: nowrap;
         list-style: none;
         grid-auto-flow: column;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
     }
 
     .navbar a {
@@ -290,8 +283,14 @@ footer a, footer p {
         align-self: center;
     }
 
-    #koers-service {
-        width: 100%;
+    p, h1, h2, h3, h4, h5, h6 {
+        clear: both;
+    }
+    main img {
+        min-width: min(999px, 100%);
+        height: auto;
+        margin-block: 1rem;
+
     }
 }
 
@@ -303,7 +302,7 @@ footer a, footer p {
 
     main {
         margin-inline: 5%;
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
         clear: both;
     }
 
@@ -315,6 +314,8 @@ footer a, footer p {
 
     .navbar li {
         justify-content: center;
+        width: 100%;
+
     }
 
     .box {
@@ -323,8 +324,13 @@ footer a, footer p {
         width: 95%;
     }
 
-    #koers-service {
-        width: 100%;
+    p, h1, h2, h3, h4, h5, h6 {
+        clear: both;
+    }
+    main img {
+        min-width: min(699px, 100%);
+        height: auto;
+        margin-block: 1rem;
     }
 }
 
